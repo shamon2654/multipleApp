@@ -1,0 +1,19 @@
+{
+  "name": "multi-app-project",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev:HostApp": "npm run dev --prefix apps/HostApp",
+    "dev:HomeApp": "npm run dev --prefix apps/HomeApp",
+    "dev:FromApp": "npm run dev --prefix apps/FromApp",
+    "dev:all": "concurrently \"npm run dev:HostApp\" \"npm run dev:HomeApp\" \"npm run dev:FromApp\""
+  },
+  "dependencies": {
+    "concurrently": "^6.5.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.45",
+    "tailwindcss": "^3.4.10"
+  }
+}
